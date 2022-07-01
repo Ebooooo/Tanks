@@ -22,9 +22,9 @@ public class Bullets1 : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D wall) 
     {
-        if(wall.gameObject.CompareTag("WallUP"))
+        if(wall.gameObject.CompareTag("Player1"))
         {
-            Debug.Log("uderzylem");
+            numBul.player1hp--;
         }
         if(wall.gameObject.CompareTag("WallSide"))
         {

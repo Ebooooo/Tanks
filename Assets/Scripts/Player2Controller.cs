@@ -6,6 +6,7 @@ public class Player2Controller : MonoBehaviour
 {
     public float RotateSpeed = 3f;
     public float MoveSpeed = 0.5f;
+    public int player2hp = 1;
 
 
 

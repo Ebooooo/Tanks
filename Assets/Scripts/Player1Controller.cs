@@ -6,6 +6,7 @@ public class Player1Controller : MonoBehaviour
 {
     public float RotateSpeed = 3f;
     public float MoveSpeed = 0.5f;
+    public int player1hp = 1;
     public Bullets1 bulletspawn;
     public Minigun1 MinigunActivePerk;
     public bool perkMinigunActive;
