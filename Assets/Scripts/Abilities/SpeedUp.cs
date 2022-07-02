@@ -7,12 +7,13 @@ public class SpeedUp : MonoBehaviour
     public GameObject SpeedPerkIcon;
     public Player1Controller SpeedUp1;
     public Player2Controller SpeedUp2;
+    public SpawnPerks number;
 
     void Start()
     {
-        SpeedPerkIcon.SetActive(false);
         SpeedUp1 = GameObject.Find("Player1").GetComponent<Player1Controller>();
         SpeedUp2 = GameObject.Find("Player2").GetComponent<Player2Controller>();
+        number = GameObject.Find("SpawnPerks").GetComponent<SpawnPerks>();
     }
 
     void Update()
@@ -24,17 +25,18 @@ public class SpeedUp : MonoBehaviour
         if(player.CompareTag("Player1"))
         {
             DestroyObject();
-            SpeedUp1.MoveSpeed = 2f;
+            SpeedUp1.MoveSpeed = 6f;
         }
         if(player.CompareTag("Player2"))
         {
             DestroyObject();
-            SpeedUp2.MoveSpeed = 2f;
+            SpeedUp2.MoveSpeed = 6f;
         }
     }
 
     public void DestroyObject()
     {
         Destroy(gameObject, 0);
+        number.numberOfPerks--;
     }
 }

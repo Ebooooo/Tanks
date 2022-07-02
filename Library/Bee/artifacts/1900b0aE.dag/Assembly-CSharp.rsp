@@ -391,6 +391,8 @@
 "Assets/Scripts/Minigun1.cs"
 "Assets/Scripts/Player1Controller.cs"
 "Assets/Scripts/Player2Controller.cs"
+"Assets/Scripts/SpawnManager.cs"
+"Assets/Scripts/SpawnPerks.cs"
 -langversion:9.0
 
 /deterministic

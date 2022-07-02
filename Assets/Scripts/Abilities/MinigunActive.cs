@@ -7,12 +7,13 @@ public class MinigunActive : MonoBehaviour
     public GameObject MinigunIcon;
     public Player1Controller MinigunActive1;
     public Player2Controller MinigunActive2;
+    public SpawnPerks number;
 
     void Start()
     {
-        MinigunIcon.SetActive(false);
         MinigunActive1 = GameObject.Find("Player1").GetComponent<Player1Controller>();
         MinigunActive2 = GameObject.Find("Player2").GetComponent<Player2Controller>();
+        number = GameObject.Find("SpawnPerks").GetComponent<SpawnPerks>();
     }
 
     void Update()
@@ -31,5 +32,6 @@ public class MinigunActive : MonoBehaviour
     public void DestroyObject()
     {
         Destroy(gameObject, 0);
+        number.numberOfPerks--;
     }
 }
